@@ -13,6 +13,14 @@ sqlalchemy
 
 ####################################################################################
 
+#LLM
+
+cohere
+langchain-cohere
+
+langchain
+langgraph
+
 
 #computer-vision
 opencv-python
