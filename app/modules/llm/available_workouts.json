@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Push-up",
+    "description": "Bodyweight exercise for upper body strength",
+    "goal": "strength",
+    "body_area": "arms,chest",
+    "media_url": "https://example.com/workouts/pushup.gif"
+  },
+  {
+    "id": 2,
+    "name": "Plank",
+    "description": "Core stability exercise",
+    "goal": "general_fitness",
+    "body_area": "abs,back",
+    "media_url": "https://example.com/workouts/plank.gif"
+  },
+  {
+    "id": 3,
+    "name": "Squat",
+    "description": "Lower body strength exercise",
+    "goal": "strength",
+    "body_area": "legs,glutes",
+    "media_url": "https://example.com/workouts/squat.gif"
+  },
+  {
+    "id": 4,
+    "name": "Jumping Jacks",
+    "description": "Cardio warm-up exercise",
+    "goal": "fat_loss",
+    "body_area": "full body",
+    "media_url": "https://example.com/workouts/jumping_jacks.gif"
+  },
+  {
+    "id": 5,
+    "name": "Yoga Stretch",
+    "description": "Flexibility and relaxation exercise",
+    "goal": "flexibility",
+    "body_area": "full body",
+    "media_url": "https://example.com/workouts/yoga_stretch.gif"
+  }
+]

@@ -1,0 +1,89 @@
+venv
+gym_env
+.env
+help.txt
+
+*.onnx
+
+test_lab.db
+
+
+# --- Python basics ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# --- Virtual environments ---
+.gym_env/
+.venv/
+venv/
+ENV/
+env/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Logs & temp ---
+*.log
+*.tmp
+tmp/
+temp/
+
+# --- Environment & secrets ---
+.env
+.env
+*.env
+
+# --- Tool caches ---
+# Ruff
+.ruff_cache/
+# MyPy
+.mypy_cache/
+# PyTest
+.pytest_cache/
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+# Pip
+pip-log.txt
+pip-wheel-metadata/
+
+# --- Node/Frontend (if added later) ---
+node_modules/
+dist/
+build/
+
+# --- Editors & IDEs ---
+.vscode/
+.idea/
+*.iml
+
+# --- Media & uploads ---
+media/
+uploads/
+# اگر می‌خوای پوشه media نسخه‌شده باشه، فقط فایل‌های داخلش را ignore کن:
+# media/*
+# !media/.gitkeep
+
+# --- Alembic & migrations ---
+# نسخه‌ها باید commit شوند، پس migrations را نگه می‌داریم
+# اگر فایل‌های کش خواستی:
+migrations/versions/__pycache__/
+migrations/*.pyc
+
+# --- Docker (در صورت اضافه‌شدن) ---
+docker-compose.override.yml
+*.local.yml
+
+# --- Jupyter (اگر بعداً استفاده شد) ---
+.ipynb_checkpoints/
+
+# --- Misc ---
+coverage.xml
+pytestdebug.log
+env
+

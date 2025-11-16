@@ -1,0 +1,39 @@
+services:
+  db:
+    image: postgres:16
+    container_name: gymy_db
+    environment:
+      POSTGRES_USER: gymy
+      POSTGRES_PASSWORD: gymy_pass
+      POSTGRES_DB: gymy_smart
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./deploy/db-init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gymy -d gymy_smart"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: gymy_app
+    environment:
+      DATABASE_URL: postgresql+psycopg://gymy:gymy_pass@db:5432/gymy_smart
+      CORS_ORIGINS: "*"
+      LOGIN_TIMEOUT_SECONDS: "120"
+      COSINE_LOGIN_THRESHOLD: "0.60"
+      COHERE_API_KEY: "${COHERE_API_KEY:-}"
+    depends_on:
+      db:
+        condition: service_healthy
+    ports: ["8000:8000"]
+    volumes:
+      - ./app:/app/app
+      - ./app/modules/face/models:/app/app/modules/face/models
+
+volumes:
+  pgdata:
