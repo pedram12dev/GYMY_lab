@@ -1,36 +1,20 @@
-#requirements.txt
-####################################################################################
-
-#backend
 fastapi
 uvicorn[standard]
-
-####################################################################################
-
-#database
-
-sqlalchemy
-
-####################################################################################
-
-#LLM
-
-cohere
-langchain-cohere
-
-langchain
-langgraph
-
-
-#computer-vision
+pydantic
+pydantic-settings
+python-multipart
+python-dotenv
+SQLAlchemy
+psycopg[binary]
+alembic
+numpy
+Pillow
 opencv-python
 onnxruntime
+httpx
+websockets
 
-####################################################################################
-
-#coding
-# ruff
-# black 
-# isort
-# mypy
-# pre-commit
+langchain-core
+langchain-cohere
+langgraph
+cohere
